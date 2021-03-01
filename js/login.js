@@ -5,12 +5,12 @@ var username = document.getElementById("username").value;
 var password = document.getElementById("password").value;
 if ( username == "GA-transpofile" && password == "transpofile2021"){
 alert ("Login successfully");
-window.location = "html/Home.html"; // Redirecting to other page.
+window.location = "html/qrcode.html"; // Redirecting to other page.
 return false;
 }
 else{
 attempt --;// Decrementing by one.
-alert("You have left "+attempt+" attempt;");
+alert("You have left "+attempt+" attempt; Authorize Personnel to Login only");
 // Disabling fields after 3 attempts.
 if( attempt == 0){
 document.getElementById("username").disabled = true;
