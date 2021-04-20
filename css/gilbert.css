@@ -92,7 +92,7 @@ body{font-family:calibri;font-size:14.5;font-style:bold;Margin:AUTO;background:l
         align-item:center;}
       .gilfooter2{ pading:1%;letter-spacing:.3; word-spacing:.3; font-size:11; margin:auto;}
        #gilflex1-2{display:inline-block;display:flex;flex-flow:row wrap; margin:auto; width:100%; background:linear-gradient(to bottom,#fff, #fff, #fff,#fff,#fff); padding:1%;}
-.gilh1{letter-spacing:.1em; font-size:30; font-family:krinkes;
+.gilh1{letter-spacing:.1em;font-color:Whitesmoke; font-size:30; font-family:krinkes;
   background-image:url("https://cdn.wallpapersafari.com/1/87/9n5whG.jpg");
 	background-repeat:no-repeat;background-attachment: stretch; width:100%; height:auto; padding:5%;margin-top:0;margin-left:0;margin-right:0;}
         .logo{width:150px;height:150px;}
