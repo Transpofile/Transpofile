@@ -109,9 +109,41 @@ body{font-family:calibri;font-size:14.5;font-style:bold;Margin:AUTO;background:l
         word-spacing:.2em; background:white; border-radius:5px;}
 			.gilp13{background:whitesmoke;border-radius:5px;padding:1%;}
 			.gilp13:nth-child{background:#d8d8d9;}
-			.gilp12-1{max-width:100%; border:auto; padding:1%; margin-left:4;margin-right:6; font-family:calibri;font-size:32; letter-spacing:.2em;
-        			word-spacing:.2em; background:white; border-radius:5px; display:flex;flex-direction: row;}
-				.gilp12-1:hover{background:whitesmoke;}
+
+
+
+@media (max-width: 800px) {
+  .flex-container {
+    flex-direction: column;
+  }
+}
+
+.gilp12-1{
+
+	max-width:100%; border:auto; padding:1%; margin-left:4;margin-right:6; font-family:calibri;font-size:32; letter-spacing:.2em;
+      word-spacing:.2em; background:white; border-radius:5px; display:flex;flex-direction: row;
+
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+  text-align: center;
+}
+
+.gilp12-2{
+  background-color: #f1f1f1;
+  padding: 10px;
+  flex: 50%;
+}
+
+.gilp12-3 {
+  background-color: dodgerblue;
+  padding: 10px;
+  flex: 50%;
+}
+.gilp12-1:hover{background:whitesmoke;}
+
+
+
 			.gilp14{background:whitesmoke;border-radius:5px;padding:1%;}
 			.gilp14:nth-child{background:#d8d8d9;}
 			
