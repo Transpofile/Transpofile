@@ -4,7 +4,7 @@ body{font-family:calibri;font-size:14.5;font-style:bold;Margin:AUTO;background:l
       .gil1{display:inline-block; margin-left:-3;color:#000; padding:.3%; margin-top:-10px;
             display:flex; position:sticky;letter-spacing:1%;font-size:10px;background:Orange;  <!----linear-gradient(to bottom, #183e8a, #183e8a, #173675,#173675,#173675);-->}
       .gil1>.gil2{border-radius:5em;word-spacing:.5em;box-shadow:2px 0px 3px 0px; }
-      .gil1>.gil2>a:hover{color:#4b4e4f;text-decoration:none;background:gold; padding:1; border-radius:3px;}
+      .gil1>.gil2>a:hover{color:#4b4e4f;text-decoration:none;background:#595C57; padding:1; border-radius:3px;}
       a:visited{color:#fff;text-decoration:none; letter-spacing:.4%;}
       a:link{color:white; text-decoration:none;}
 	  .gilarea{font-size:23;background:#fff; display:flex;flex-direction:Column; border-radius:5px 5px 5px 5px;}
@@ -161,7 +161,7 @@ background:transparent;
   text-decoration: none;
   display: block;
 }
-.dropdown-content a:hover{background:linear-gradient(to bottom, #183e8a, #183e8a, #173675,#173675,#173675);text-decoration:none;color:#fff;
+.dropdown-content a:hover{background:#DFE3DD;text-decoration:none;color:#fff;
 							font-size:10px;}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color:transparent;
