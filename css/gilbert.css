@@ -145,6 +145,7 @@ background:transparent;
 .dropdown {
   position: relative;
   display: inline-block;
+  animation-duration: 3s;
 }
 .dropdown-content {
   display: none;
