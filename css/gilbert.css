@@ -114,7 +114,7 @@ body{font-family:calibri;font-size:14.5;font-style:bold;Margin:AUTO;background:l
 * {
   box-sizing: border-box;
 }
-@media (max-width: 800px) {
+@media (max-width: 1150px) {
   .gilp12-1 {
     flex-direction: column;
   }
