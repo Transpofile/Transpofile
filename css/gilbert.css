@@ -161,7 +161,7 @@ background:transparent;
   text-decoration: none;
   display: block;
 }
-.dropdown-content a:hover{background:#DFE3DD;text-decoration:none;color:#fff;animation-duration: 3s;
+.dropdown-content a:hover{background:#DFE3DD;text-decoration:none;color:#2F322E;animation-duration: 3s;
 							font-size:10px;}
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn {background-color:transparent;
