@@ -2,7 +2,7 @@
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
-  margin:3%;
+  margin:5px;
 }
 
 #customers td, #customers th {
@@ -12,7 +12,7 @@
 
 #customers tr:nth-child(even){background-color: #f2f2f2;}
 
-#customers tr:hover {background-color: #ddd;}
+#customers tr:hover {background-color: #ddd; cursor:pointer;}
 
 #customers th {
   padding-top: 12px;
