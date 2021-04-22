@@ -14,11 +14,16 @@
 
     <script src="../../login.js"></script>
    <script src="chatbox.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
-    
-    <style>
-    
-    </style>
+    <script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel").slideToggle("slow");
+  });
+});
+</script>
+
     
   </head>
   <body>
@@ -83,6 +88,8 @@
  <div> 
   
   <h2 class="gilp1" style="font-size:32;">Daily Activities and Vehicle Monitoring Records</h2>	 
+	 <div id="flip">FERUARY 2021 </div>
+<div id="panel">
 <table id="customers">
   <tr>
     <th>Name</th>
@@ -371,6 +378,9 @@
     <td>February 28, 2021</td>
     <td>Night Shift</td>
   </tr>
+	</table>
+	
+	<table id="customers">
   <tr>
    <td>SCF Daily Activities and Vehicle Monitoring</td>
     <td>March 1, 2021</td>
