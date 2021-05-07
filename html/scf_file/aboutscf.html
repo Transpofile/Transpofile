@@ -1,1 +1,716 @@
 
+
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>StarComm Live Tracking</title>
+    
+    
+        <link rel="stylesheet" type="text/css" href="../../css/gilbert.css">
+    <link rel="styleSheet" type="text/css" href="../../css/gil.css">
+ <link rel="stylesheet" type="text/css" href="../../css/table.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="../../login.js"></script>
+    
+    
+    
+    
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="Cache-control" CONTENT="no-cache">
+	<meta http-equiv="Pragma" CONTENT="no-cache">
+	<meta name="Keywords" content="starcomm, starcomm.ph, gps, 3rd eye gps, star communications, star communications holding corp." />
+	<!--link rel="stylesheet" href="css/starcomm.css" type="text/css" /-->
+	<link rel="stylesheet" href="css/starcomm.css" type="text/css" />
+	<script src="js/jquery_1.js"></script>
+	
+		<link rel="shortcut icon" href="favicon.ico" >
+	
+	 <style>
+			body{
+			margin: 0;
+			padding: 0;
+			border: 0;
+			overflow: hidden;
+			height: 100%; 
+			max-height: 100%; 
+	
+			}
+
+			#framecontent{
+			position:absolute;
+			top: 0;
+			bottom: 0; 
+			left: 0;
+			margin-top:120px;
+			width: 200px; /*Width of frame div*/
+			height: 100%;
+			 /*Disable scrollbars. Set to "scroll" to enable*/
+			background: #fff;
+			color: white;
+			}
+
+			#maincontent{
+			position: fixed;
+			top: 0; 
+			left: 200px; /*Set left value to WidthOfFrameDiv*/
+			right: 0;
+			bottom: 0;
+			overflow: auto; 
+			background: #fff;
+			}
+
+			.innertube{
+			margin: 15px; /*Margins for inner DIV inside each DIV (to provide padding)*/
+			}
+			.innertubex{
+			margin: 5px; /*Margins for inner DIV inside each DIV (to provide padding)*/
+			margin-top:15px;
+			color:#000;
+			height: 100%;
+			position:relative;
+			overflow-x: scroll;
+			}
+
+			* html body{ /*IE6 hack*/
+			padding: 0 0 0 200px; /*Set value to (0 0 0 WidthOfFrameDiv)*/
+			}
+
+			* html #maincontent{ /*IE6 hack*/
+			height: 100%; 
+			width: 100%; 
+			}
+
+		#map-canvas img {
+		  max-width: none;
+		}
+      #map-canvas {
+			width:100%;
+			height:100%;
+			background-color:#eee;
+      }
+	  #tabledata{
+			width:100%;
+			
+			background-color:#fff;
+			overflow-x:scroll;
+	  }
+	  .tclass{
+		height:600px;
+	  }
+	  tbody > tr, #xway, #liveup{
+		cursor:pointer;
+	  }
+	   tbody > tr .center:hover{
+		background-color:#FFE4C4;
+	  }
+	  tbody > tr#center:hover{
+		background-color:#FFE4C4;
+	  }
+	  .invi{
+		display:none;
+	  }
+	  
+	  #help{
+		position:absolute;
+		right:10px;
+		top  :120px;
+		z-index:1;
+		width:150px;
+		height:auto;
+		background-color:#FFF;
+		padding:5px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid;
+	  }
+
+	 tbody > tr > td, .xinfo {
+		font-family: calibri;
+		font-size: 12px;
+	}	
+	.xinfo{
+		line-height:15px;
+	}
+	.pad {
+		padding:1px;
+		margin:2px;
+	}
+	table {
+		line-height:15px;
+	}
+	tbody {
+		display: table-row-group;
+		
+	}
+	#xnav{
+		top: 0;
+		left: 8px;
+		position:absolute;
+	}
+
+	.waypoints, .xliveup1
+	{
+	width:80px;
+	height:44px;
+	background:url(image/switch.png) 0 0;
+	}
+	.xwaypoints, .xliveup2
+	{
+	width:80px;
+	height:44px;
+	background:url(image/switch.png) 0 46px;
+	}
+    </style>
+	<script src="js/map.js"></script>
+<script>
+
+var myVarx;
+var gmarkers = []; 
+var mark=[];
+var fence_mark=[];
+var myVar;
+var map;
+var fence_visible = true;
+var find_height=false;
+
+var mylat1='';
+var mylat2='';
+var malng1='';
+var malng2='';
+
+var xoverlay=[];
+//getVisible()
+
+//          center: new google.maps.LatLng(12.039321, 121.053543),
+
+	  
+</script>
+
+</head>
+<body >
+
+	<div id="xnav">
+		<br/>
+		<img src="image/xlogo.png" />
+		<br/>
+		<br/>
+		<table id="xtable" class="tblvlogs" border="1">
+			<thead>
+				<tr class="center tbh bold" >
+					<td class="one">Latest Report</td>
+				</tr>
+			</thead>
+		</table>
+	</div>
+
+		<div id="framecontent">
+
+				<div class="innertubex">
+					<table id="gpstable" class="tblvlogs" border="1">
+						<tbody>
+							<tr>
+								<td align="center" valign="middle"><img src="image/loader-maki.gif"></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+	
+		</div>
+
+		<div id="maincontent">
+		<!--div id="help">
+			<div class="divButton">
+				<a data-toggle="modal" href="#windowTitleDialog" class="btn btn-primary btn-large">Help</a>
+			</div>
+		</div-->
+		
+
+		
+			<div id="map-canvas">	
+			</div>	
+		</div>
+
+</body>
+</html>
+<script>
+var myid = '268067';
+</script>
+<script src="js/limit.js"></script>
+<script>
+var myVar;
+var live_tack =false
+		var colors = ['#1E90FF', '#FF1493', '#32CD32', '#FF8C00', '#3366FF'];
+		var ulimit=$.parseJSON('"OFF"');
+		var xcolor = colors[2];
+		var xbound = [];
+	
+	
+		function deg2rad (angle) {
+		  // *     example 1: deg2rad(45);
+		  // *     returns 1: 0.7853981633974483
+		  // (angle / 180) * Math.PI;
+		  //return angle * .017453292519943295; 
+		  angle = (angle / 180) * Math.PI;
+		  return  angle;
+		}	
+		
+		function computeDistance(lat1,lon1,lat2,lon2){
+		//function computeDistanceA($type=""){
+			//$rep = new datax();
+			var isround=false;
+			
+			if(lat1<1 || lat2<1 || lon1<1 || lon2<1){
+				return 0;
+			}
+
+			//Be sure that the Data will be Converted into DECIMAL
+			var R = 6371; // km
+			
+			//Convert into POSITIVE or Absolute Value 
+			 var dLat = Math.abs(lat2-lat1);
+			 var dLon = Math.abs(lon2-lon1);
+			 
+			 //Convertion of Radius to Degree
+			 dLat = deg2rad(dLat);
+			 dLon = deg2rad(dLon);
+			
+			var d = Math.sqrt(Math.pow(dLat, 2)+Math.pow(dLon, 2));
+			
+			//Radius in KM multiply into Distance
+			d = d * R; 
+			
+			//Return Rounded value
+			if(isround!=false){
+				d = Math.round(d,2);
+			}
+			
+			//Return Kilometer Value
+			return  d;
+		}
+		
+	//make polygon
+		var i;
+			 
+	function find_color(xcolor){
+		var flag=false;
+		if(xcolor=="aquamarine" && flag==false){
+			xcolor='#7FFFD4';
+			flag=true;
+		}
+		if(xcolor=="blue violet" && flag==false){
+			xcolor='#8A2BE2';
+			flag=true;
+		}
+		if(xcolor=="blue" && flag==false){
+			xcolor='#0000FF';
+			flag=true;
+		}
+		
+		if(xcolor=="brown" && flag==false){
+			xcolor='#A52A2A';
+			flag=true;
+		}
+		
+		if(xcolor=="coral" && flag==false){
+			xcolor='#FF7F50';
+			flag=true;
+		}		
+
+		if(xcolor=="cornflower blue" && flag==false){
+			xcolor='#6495ED';
+			flag=true;
+		}
+		
+		if(xcolor=="crimson" && flag==false){
+			xcolor='#DC143C';
+			flag=true;
+		}		
+
+		if(xcolor=="cyan" && flag==false){
+			xcolor='#00FFFF';
+			flag=true;
+		}	
+		
+		if(xcolor=="dark blue" && flag==false){
+			xcolor='#00008B';
+			flag=true;
+		}	
+		
+		if(xcolor=="dark cyan" && flag==false){
+			xcolor='#008B8B';
+			flag=true;
+		}	
+		
+		if(xcolor=="dark green" && flag==false){
+			xcolor='#006400';
+			flag=true;
+		}					
+		
+		if(xcolor=="dark orchid" && flag==false){
+			xcolor='#9932CC';
+			flag=true;
+		}					
+		
+		if(xcolor=="fire brick" && flag==false){
+			xcolor='#B22222';
+			flag=true;
+		}	
+		
+		if(xcolor=="fuschia" && flag==false){
+			xcolor='#FF00FF';
+			flag=true;
+		}
+		
+		if(xcolor=="gold" && flag==false){
+			xcolor='#DAA520';
+			flag=true;
+		}
+		
+		if(xcolor=="green" && flag==false){
+			xcolor='#008000';
+			flag=true;
+		}
+		
+		if(xcolor=="hot pink" && flag==false){
+			xcolor='#FF69B4';
+			flag=true;
+		}
+		
+		if(xcolor=="indian red" && flag==false){
+			xcolor='#CD5C5C';
+			flag=true;
+		}
+		
+		if(xcolor=="indigo" && flag==false){
+			xcolor='#4B0082';
+			flag=true;
+		}
+		
+		if(xcolor=="light gray" && flag==false){
+			xcolor='#778899';
+			flag=true;
+		}
+		
+		if(xcolor=="lime" && flag==false){
+			xcolor='#00FF00';
+			flag=true;
+		}	
+		
+		if(xcolor=="orange red" && flag==false){
+			xcolor='#FF4500';
+			flag=true;
+		}	
+
+		if(xcolor=="pale violet red" && flag==false){
+			xcolor='#D87093';
+			flag=true;
+		}
+
+		if(xcolor=="plum" && flag==false){
+			xcolor='#DDA0DD';
+			flag=true;
+		}
+
+		if(xcolor=="red" && flag==false){
+			xcolor='#FF0000';
+			flag=true;
+		}
+
+		if(xcolor=="royal blue" && flag==false){
+			xcolor='#4169E1';
+			flag=true;
+		}
+
+		if(xcolor=="sea green" && flag==false){
+			xcolor='#2E8B57';
+			flag=true;
+		}
+
+		if(xcolor=="teal" && flag==false){
+			xcolor='#008080';
+			flag=true;
+		}
+
+		if(xcolor=="yellow green" && flag==false){
+			xcolor='#9ACD32';
+			flag=true;
+		}
+
+		if(xcolor=="yellow" && flag==false){
+			xcolor='#FFFF00';
+			flag=true;
+		}
+		
+		if(xcolor=="mint green" && flag==false){
+			xcolor='#98FF98';
+			flag=true;
+		}
+		
+		if(xcolor=="dark turquoise" && flag==false){
+			xcolor='#00CED1';
+			flag=true;
+		}
+		
+		if(xcolor=="tomato" && flag==false){
+			xcolor='#FF6347';
+			flag=true;
+		}
+			
+			if(xcolor=="chocolate" && flag==false){
+			xcolor='#D2691E';
+			flag=true;
+		}
+		
+		if(xcolor=="steel blue" && flag==false){
+			xcolor='#4682B4';
+			flag=true;
+		}
+		
+		if(xcolor=="sky blue" && flag==false){
+			xcolor='#87CEEB';
+			flag=true;
+		}
+		
+		if(xcolor=="silver" && flag==false){
+			xcolor='#C0C0C0';
+			flag=true;
+		}
+		
+		if(xcolor=="maroon" && flag==false){
+			xcolor='#800000';
+			flag=true;
+		}
+		
+		if(xcolor=="pale golden rod" && flag==false){
+			xcolor='#EEE8AA';
+			flag=true;
+		}
+		
+		if(xcolor=="black" && flag==false){
+			xcolor='#000000';
+			flag=true;
+		}
+																
+		if(flag==false){
+			xcolor = '#000';
+		}
+		
+		return xcolor;
+	}	
+	
+var first_load = true;
+
+	
+	function call_me(){
+	var icount = 0;
+		activate(false);
+		var order = '2';
+		var by = 'asc';
+		activate(false);
+		$.getJSON("liveoperation.php?"+"&order="+order+"&by="+by, function(data) {
+		
+		//alert(data.length+"->"+mark.length);
+		//console.log(gmarkers);
+		if(data.length!=0){
+			clearmarkers(gmarkers);
+			gmarkers=[];
+			$('.innertubex tbody').html('');
+			$.each(data,function(i,val){
+				activate(false);
+
+					var html="";
+					var lat=data[i]['Latitude'];
+					var lng=data[i]['Longitude'];
+					
+					if(lat!=0 && lng!=0){	
+						if(mylat1=='' || mylat1<lat){
+							mylat1=lat;
+							mylng1=lng;
+							if(mylat2=='' || mylat2>lat){
+								mylat2=lat;
+								mylng2=lng;
+							}
+						}else{
+							if(mylat2=='' || mylat2>lat){
+								mylat2=lat;
+								mylng2=lng;
+							}
+						}
+					}	
+					
+				//	alert("latitude A : "+lat+"> Current : "+mylat1);
+				//	alert("latitude B : "+lat+"< Current : "+mylat2);
+					
+					var xcolor="#000";
+					xcolor=find_color(data[i]['color']);
+						html +="<td class='center' id='"+data[i]['PNumber']+"'><b><span style='color:"+xcolor+";'>"+data[i]['PNumber']+"</span></b><br/>";
+						html +=data[i]['vehicle_id']+"<br/>";
+						
+						html +="<span class='italic bold purple'>"+data[i]['Speed']+" kph</span><br/><br/>";
+						
+						html +=data[i]['Date']+" "+data[i]['Time']+"<br/>";
+						html +=data[i]['Street1']+", "+data[i]['Street2']+"<br/>";
+						html +=data[i]['City']+", "+data[i]['Region']+"<br/><br/>";
+						html +=data[i]['Temp1']+"<br/><br/>";
+						if(data[i]['Engine']=='ON'){
+							html +="<span class='orange bold'>ENGINE ON</span><br/>";	
+						}else{
+							html +="<span class='gray'>ENGINE OFF</span><br/>";	
+						}
+												if(data[i]['Door']=='ON'){
+							html +="<span class='orange bold'>Door Opened</span><br/>";	
+						}else{
+							html +="<span class='gray'>Door Closed</span><br/>";	
+						}		
+												if(data[i]['Emergency']=='ON'){
+							html +="<span class='red bold'>Emergency ON</span><br/>";	
+						}else{
+							html +="<span class='gray'>Emergency OFF</span><br/>";	
+						}							
+
+												if(data[i]['Call']=='ON'){
+							html +="<span class='red bold'>Call ON</span><br/>";	
+						}else{
+							html +="<span class='gray'>Call OFF</span><br/>";	
+						}
+												html +="</td>";	
+
+						
+						
+					var cdt = new Date(data[i]['Date'] +" "+ data[i]['Time']);            // modify aug 28 2014 by rahndel. limit user access
+					var wd =cdt.getDay() -1;				// ******** Day of the week  LIMIT**********
+					var hm =parseInt(parseInt(cdt.getHours() * 60) + parseInt(cdt.getMinutes()) );
+					var hide = false;
+					if (wd == -1) wd = 6;
+					//console.log(wd)
+					if ($.isArray(ulimit)){ 
+						if (ulimit.length==1) if(hm<ulimit[0][0] || hm > ulimit[0][1]) hide = true; 
+						if (ulimit.length==7){
+							if($.isArray(ulimit[wd])){
+							if(hm<ulimit[wd][0] || hm > ulimit[wd][1]) hide = true;
+							} else { hide = true; }
+						} 
+					}
+				if(hide==false){
+				html = "<tr id='center' class='"+ icount +"'>"+html+"</tr>";
+						$('.innertubex tbody').append(html);
+						icount++;
+						}
+					if(html!=''){
+					
+					html="<div class='xinfo'>";
+					html +="<b>Vehicle No. : <span style='color:"+xcolor+";'>"+data[i]['vehicle_id']+"</span></b><br/>";
+					html +="<b>Plate No. : </b>"+data[i]['PNumber']+"<br/>";
+					html +="<b>Date / Time : </b>"+data[i]['Date']+", "+data[i]['Time']+"<br/>";	
+					html +="<b>Location : </b>"+data[i]['Street1']+", "+data[i]['Street2']+" "+data[i]['City']+", "+data[i]['Region']+"<br/>";	
+					html +="<b>Speed : </b><span class='italic bold purple'>"+data[i]['Speed']+" kph</span><br/>";
+					html +="<b>Temperature : </b>"+data[i]['Temp1']+"<br/>";
+			
+						if(data[i]['Engine']=='ON'){
+							html +="<span class='orange bold'>ENGINE ON</span><br/>";	
+						}else{
+							html +="<span class='gray'>ENGINE OFF</span><br/>";	
+						}
+												if(data[i]['Door']=='ON'){
+							html +="<span class='orange bold'>Door Opened</span><br/>";	
+						}else{
+							html +="<span class='gray'>Door Closed</span><br/>";	
+						}		
+												if(data[i]['Emergency']=='ON'){
+							html +="<span class='red bold'>Emergency ON</span><br/>";	
+						}else{
+							html +="<span class='gray'>Emergency OFF</span><br/>";	
+						}							
+												if(data[i]['Call']=='ON'){
+							html +="<span class='red bold'>Call ON</span><br/>";	
+						}else{
+							html +="<span class='gray'>Call OFF</span><br/>";	
+						}
+												html +="</div>";
+						var color=data[i]['color'];
+						if(hide==false){
+						var imgstr = "image/trucks/"+color+".png";
+						gmarkers[icount-1]=createMarker(lng,lat,html,imgstr,30,30,map);
+						}
+		
+					}
+				});
+			}	
+				
+		})
+		.complete(function() { 
+		
+			if (first_load){ 
+				var newBound = markers.getDataExtent();
+				map.zoomToExtent(newBound);
+			first_load=false;
+			}
+		find_height=true;
+		activate(true);
+		
+		});
+	}
+	function activate(timer){
+
+		if(timer==true){
+				myVar=setInterval(function(){
+				
+					call_me();
+				
+				},10000);
+
+		}
+		if(timer==false){
+			clearInterval(myVar);
+		}
+	}	
+	
+
+	function load_this(){
+	
+	$.getJSON("load_fences.php", function(data) {
+		$.each(data,function(i,val){
+		if(data[i].shape=="Circle") drawCircle(data[i].marker1.split(",")[1],data[i].marker1.split(",")[0],data[i].circ_radius,data[i].name,data[i].xtype);
+		if(data[i].shape=="Rectangle") drawRectangle(data[i].marker1,data[i].marker2,data[i].name,data[i].xtype);
+		if(data[i].shape=="Polygon") drawPolygon(data[i].marker1,data[i].name,data[i].xtype);
+		});
+		
+	}).complete(function() { 
+			call_me();
+	});
+}
+
+$('.tblvlogs tbody tr').live('click',function(){
+var p_ = $(this).attr('class');
+gmarkers[p_].marker.events.triggerEvent("mousedown");
+	var xt=gmarkers[p_].lonlat;
+	//map.panTo(xt)
+	map.setCenter(xt, 16 );
+});
+
+map = load_map("map-canvas",true,0,0,0);
+function mapcallback(map){ // create a function mapload so if map is loaded you can now do next program
+	
+			markers = new OpenLayers.Layer.Markers("Markers");
+			geofence = new OpenLayers.Layer.Vector("Geofence");
+			hotspot = new OpenLayers.Layer.Vector("Hotspot");
+			waypoint = new OpenLayers.Layer.Vector("Waypoint");
+			map.addLayer(geofence);
+			map.addLayer(hotspot);
+			map.addLayer(waypoint);
+			map.addLayer(markers);
+			geofence.setVisibility(false);
+			hotspot.setVisibility(false);
+			waypoint.setVisibility(false);
+			menu.maximizeControl();
+		load_this();
+}
+
+</script>
