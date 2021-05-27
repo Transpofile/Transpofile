@@ -32,7 +32,7 @@ html{
 
 
 
-body{font-family:calibri;font-size:14.5;font-style:bold;Margin:0;background:linear-gradient(to bottom, #183e8a, #183e8a, #173675,#173675,#173675); }
+body{font-family:calibri;font-size:14.5;font-style:bold;Margin:auto;background:linear-gradient(to bottom, #183e8a, #183e8a, #173675,#173675,#173675); }
 
       .divcontent{background:transparent; color:#2058c7; padding:4.5%; opacity:80%;font-size:77 auto;}
       .gil1{display:inline-block; margin-left:-3;color:#000; padding:.3%; margin-top:-10px;
