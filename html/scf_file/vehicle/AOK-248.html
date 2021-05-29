@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<title>Grandia</title>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* The grid: Four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+  padding: 10px;
+}
+
+/* Style the images inside the grid */
+.column img {
+  opacity: 0.8; 
+  cursor: pointer; 
+}
+
+.column img:hover {
+  opacity: 1;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  color: white;
+ font-family:calibri;
+  font-size: 3vw;
+}
+
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 8%;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+
+
+
+
+<div style="margin:5%;">
+  <h2 style="font-size:2vw;"> <a href="https://transpofile.github.io/Transpofile/html/scf_file/vehicle.html#"><img src="aok248/arrow.jpg" width="3%"style="cursor:pointer;" title="Back"></a>
+	 Grandia</h2>
+  <p style="font-size:1.2vw;">Plate Number: AOK - 248</br>
+   <p style="font-size:1.2vw;">Assigned Driver: <img src="aok248/profileimage.jpg"width="5%" height="auto"/></p></br>
+	Please click images to show bigger size</p>
+</div>
+
+<!-- The four columns -->
+<center>
+
+<div class="row">
+  <div class="column">
+    <img src="aok248/hino.jpg" alt="Front View" style="width:30%;  border-radius:20px;" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="aok248/IMG_20210402_093024_631.jpg" alt="Intrance View" style="width:30%;  border-radius:20px;" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="aok248/IMG_20210415_164738_094.jpg" alt="Front of SCF Office  Parking Area" style="width:50%;  border-radius:20px;" onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="aok248/IMG_20210415_164326_355.jpg" alt="Inside View" style="width:50%; border-radius:20px;" onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+  <img id="expandedImg" style="width:90%">
+  <div id="imgtext"></div>
+</div> 
+
+</center>
+
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+</script>
+
+</body>
+</html>
