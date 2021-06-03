@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Item For PR</title>
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/13445/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+</head>
+<body>
+
+
+
+<h1 align="center" style="font-size:3vw;">
+<span style="font-size:1vw;color:red;">Note: This record is base on inspection inventory to the warehouse storage by the truck master and the THPAL personnel assigned</span>
+</br>Request For PR</h1>
+
+<center>
+
+<a href="https://transpofile.github.io/Transpofile/html/qrcode.html" style="text-decoration:none;"><button style="padding:1%;border:none;border-radius:3px 4px 3px 4px; cursor:pointer;color:red;"><b>Home</b></button></a>
+<a href="#"style="text-decoration:none;"><button style="padding:1%;border:none;border-radius:3px 4px 3px 4px; color:red;cursor:pointer;"><b>Withdraw Item to Logistics</b></button></a>
+<a href="#"style="text-decoration:none;"><button style="padding:1%;border:none;border-radius:3px 4px 3px 4px; color:red;cursor:pointer;"><b>Requested For PR</b></button></a>
+<a href="currentbill.html" style="text-decoration:none;"><button style="padding:1%;border:none;border-radius:3px 4px 3px 4px; color:red;cursor:pointer;"><b>Electric & Water Bill</b></button></a>
+
+</center>
+
+	<p align="center" style="background:whitesmoke;color:gray; padding:1%; font-size:1vw; font-family:calibri;">
+	Please enter for the Request Item for PR.
+	
+	</p>
+
+	<div style="font-family:calibri;">
+<center>
+
+
+	<form id="myForm">
+		<label>NO</label>
+		<input style="width:3vw;max-with:100%; color:gray;font-family:calibri;border:0;
+		background:whitesmoke;border-radius:7%;padding:.5%;" type="number" name="NO" />
+	
+		<label>MATERIAL</label>
+		<input style="width:15vw;max-with:100%; color:gray;font-family:calibri;border:0;
+		background:whitesmoke;border-radius:7%;padding:.5%;" type="text"name="MATERIAL" />
+		
+		<label>PR. NO.</label>
+		<input style="width:7vw;max-with:100%; color:gray;font-family:calibri;border:0;
+		background:whitesmoke;border-radius:7%;padding:.5%;" type="number" name="PR. NO." /></br></br>
+		
+		<label>DATE PROCESS</label>
+		<input style="width:9vw;max-with:100%; color:gray;font-family:calibri;border:0;
+		background:whitesmoke;border-radius:7%;padding:.5%;" type="date" name="DATE PROCESS" />
+	
+		<label>DESCRIPTION</label>
+		<input style="width:16vw;max-with:100%; color:gray;font-family:calibri;border:0;
+		background:whitesmoke;border-radius:7%;padding:.5%;" type="text" name="DESCRIPTION" />
+	
+		<label>STATUS</label>
+		<input style="width:3vw;max-with:100%; color:gray;font-family:calibri;border:0;
+		background:whitesmoke;border-radius:7%;padding:.5%;" type="text" name="STATUS" />
+		
+	</form></br></br>
+	<button style="border:solid #000;border-color:red; background:whitesmoke;color:red;padding:1%;border-radius:20%;cursor:pointer;" onclick='SubForm()'>Add to Database</button>
+
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS9y6LB5AqEEWEnWiLJupcTP8-bH8WNcVx186uCiDPtQF2xsqEFTzIvesUK-coTOGjX5Rk8bh2YDvs0/pubhtml?widget=true&amp;headers=false"
+style="width:95vw; height:95vw;padding:0; family-font:calibri;border:none;border-buttom:overflow;"></iframe>
+
+
+
+</body>
+
+</html>
