@@ -2,6 +2,28 @@
 <html>
 <head>
 	<title>Item For PR</title>
+	
+	<style>
+h1{font-size:3vw; font-family:calibri;background:whitesmoke;
+padding:1%;margin:3vw;color:gray;border-radius:1px 1px 90px 90px;
+	margin-top:-10; }
+.tablesur{width:100%; font-size:1.2vw; padding:.2%;background:transparent;
+	color:black;border-radius:10px 10px 10px 10px; border-spacing:1vw;
+	border-style:thin;family-font:}
+
+.thsur1{border-bottom:solid #C8F825;padding:1%; background:#fff;font-family:calibri;
+	border-radius:5px 5px 0px 0px;color:gray;cursor:none;
+	 border-bottom-color:#E6E31A;}
+.thsur1:hover{background:#C8F825;color:white;}
+
+
+
+
+</style>
+	
+	
+	
+	
 	<script
 		src="https://code.jquery.com/jquery-3.4.1.js"
 		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
@@ -13,7 +35,7 @@
 				type:"post",
 				data:$("#myForm").serializeArray(),
 				success: function(){
-					alert("Form Data Submitted :)")
+					alert("Item For PR Data Submitted to Database. :)")
 				},
 				error: function(){
 					alert("There was an error :(")
@@ -30,12 +52,13 @@
 <span style="font-size:1vw;color:red;">Note: This record is base on inspection inventory to the warehouse storage by the truck master and the THPAL personnel assigned</span>
 </br>Request For PR</h1>
 
+	
+	
 <center>
-
 <a href="https://transpofile.github.io/Transpofile/html/qrcode.html" style="text-decoration:none;"><button style="padding:1%;border:none;border-radius:3px 4px 3px 4px; cursor:pointer;color:red;"><b>Home</b></button></a>
-<a href="#"style="text-decoration:none;"><button style="padding:1%;border:none;border-radius:3px 4px 3px 4px; color:red;cursor:pointer;"><b>Withdraw Item to Logistics</b></button></a>
-<a href="#"style="text-decoration:none;"><button style="padding:1%;border:none;border-radius:3px 4px 3px 4px; color:red;cursor:pointer;"><b>Requested For PR</b></button></a>
-<a href="currentbill.html" style="text-decoration:none;"><button style="padding:1%;border:none;border-radius:3px 4px 3px 4px; color:red;cursor:pointer;"><b>Electric & Water Bill</b></button></a>
+<a href="https://transpofile.github.io/Transpofile/html/monitoring/withdrawal.html"style="text-decoration:none;"><button style="padding:1%;border:none;border-radius:3px 4px 3px 4px; color:red;cursor:pointer;"><b>Withdraw Item to Logistics</b></button></a>
+<a href="https://transpofile.github.io/Transpofile/html/monitoring/itemforpr.html"style="text-decoration:none;"><button style="padding:1%;border:none;border-radius:3px 4px 3px 4px; color:red;cursor:pointer;"><b>Requested For PR</b></button></a>
+<a href="https://transpofile.github.io/Transpofile/html/monitoring/currentbill.html" style="text-decoration:none;"><button style="padding:1%;border:none;border-radius:3px 4px 3px 4px; color:red;cursor:pointer;"><b>Electric & Water Bill</b></button></a>
 
 </center>
 
