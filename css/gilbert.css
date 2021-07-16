@@ -127,10 +127,10 @@ body{font-family:calibri;font-size:14.5;font-style:bold;Margin:auto;background:l
       .gilfooter2{ pading:1%;letter-spacing:.3; word-spacing:.3; font-size:11; margin:auto;}
        #gilflex1-2{display:inline-block;display:flex;flex-flow:row wrap; margin:auto; width:100%; background:linear-gradient(to bottom,#fff, #fff, #fff,#fff,#fff); padding:1%;}
 .gilh1{letter-spacing:.1em;font-color:Whitesmoke; font-size:30; font-family:krinkes;
- background-image:url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.jpg") no-repeat center center fixed
-	 -webkit-background-size: cover
-	 -moz-background-size: cover
-	 -o-background-size: cover
+ background-image:url("https://visme.co/blog/wp-content/uploads/2017/07/50-Beautiful-and-Minimalist-Presentation-Backgrounds-03.jpg") no-repeat center center fixed;
+	 -webkit-background-size: cover;
+	 -moz-background-size: cover;
+	 -o-background-size: cover;
 	 background-size: cover;
 	background-repeat:no-repeat;background-attachment: stretch; width:100%; height:auto; padding:5%;margin-top:0;margin-left:0;margin-right:0;}
         .logo{width:150px;height:150px;}
