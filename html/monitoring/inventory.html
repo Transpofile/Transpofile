@@ -15,6 +15,29 @@
     <script src="../../login.js"></script>
    <script src="chatbox.js"></script>
     
+	  
+	  
+	  <script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/15584/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+	  
+	  
     
     <style>
     
@@ -88,7 +111,88 @@
 <iframe src="https://docs.google.com/spreadsheets/d/1nWgw93sn9UAp9saZN7Sy-l_rUeNwtcG9QmAlUBsXDYs/edit?usp=sharing &amp;rm=minimal&amp;single=true&amp;" align="center" width="100%" height="950"
 	style="width:100%; height:95vw;padding:0; family-font:calibri;border:none;border-buttom:overflow; display:sticky;"> Warehouse Inventory Monitoring</iframe>
 </center>
-                                                                             
+</br></br>     
+
+
+
+<!----------------Withdraw Item in Wareshouse Storage ----------->
+
+
+
+<form id="myForm" align="Center">
+		
+	<center>
+		<table cellspacing="20px" cellpadding="5">
+		<tr><div style="font-size:5vh; color:red;font-family:courier new;">ENTER WITHDRAW ITEM</div></br>
+		<td>
+		<label id="lebel">Item No.</label></br>
+		<input id="input"  style="width:100px;max-with:100%; font-family:calibri;border:0;
+		background:white;border-radius:10%;padding:1%;" type="number" placeholder="Item No." /></br></br>
+	
+		<label id="lebel">Materials</label></br>
+		<input id="input" style="width:100px;max-with:100%; font-family:calibri;border:0;
+		background:white;border-radius:10%;padding:1%;" type="text" placeholder="Name of Materials"  name="Materials" /></br></br>
+	
+		<label id="lebel">Unit</label></br>
+		<input id="input" style="width:100px;max-with:100%; font-family:calibri;border:0;
+		background:white;border-radius:10%;padding:1%;" type="text" placeholder="Unit"  name="Unit" /></br></br>
+		</td>
+		<td>
+		<label id="lebel">Remarks</label></br>
+		<input id="input" style="width:100px;max-with:100%; font-family:calibri;border:0;
+		background:white;border-radius:10%;padding:1%;" type="text" placeholder="Remarks"  name="Remarks" /></br></br>
+	
+		<label id="lebel">Date</label> </br>
+		<input id="input" style="width:100px;max-with:100%; font-family:calibri;border:0;
+		background:white;border-radius:10%;padding:1%;" type="Date" placeholder="Date of Withdrawal"  name="Date" /></br></br>
+		
+		<label id="lebel">Quantity</label></br>
+		<input id="input" style="width:100px;max-with:100%; font-family:calibri;border:0;
+		background:white;border-radius:10%;padding:1%;" type="number" placeholder="Quantity"  name="Quantity" /></br></br>
+		</td>
+		<td>
+		<label id="lebel">Requester</label></br>
+		<input id="input" style="width:100px;max-with:100%; font-family:calibri;border:0;
+		background:white;border-radius:10%;padding:1%;" type="text" placeholder="Requester"  name="Requester" /></br></br>
+		
+		<label id="lebel">Vehicle Type</label></br>
+		<input id="input" style="width:100px;max-with:100%; font-family:calibri;border:0;
+		background:white;border-radius:10%;padding:1%;" type="text" placeholder="Vehicle Type"  name="Vehicle Type" /></br></br>
+		
+		<label id="lebel">Plate No.</label></br>
+		<input id="input" style="width:100px;max-with:100%; font-family:calibri;border:0;
+		background:white;border-radius:10%;padding:1%;" type="number" placeholder="Plate No."  name="Plate No." /></br></br>
+		</td>
+		<td>
+		<label id="lebel">Time Request</label></br>
+		<input id="input" style="width:100px;max-with:100%;font-family:calibri;border:0;
+		background:white;border-radius:10%;padding:1%;" type="Time" placeholder="Time Request"  name="Time Req." /></br></br>
+		
+		<label id="lebel">Name of Contractor</label></br>
+		<input id="input" style="width:100px;max-with:100%; font-family:calibri;border:0;
+		background:white;border-radius:10%;padding:1%;" type="text" placeholder="Name of Contractor"  name="N of C" /></br></br>
+		
+		<label id="lebel">Input By:</label></br>
+		<input id="input" style="width:100px;max-with:100%; font-family:calibri;border:0;
+		background:white;border-radius:10%;padding:1%;" type="text" placeholder="Input By:"  name="Input By:" /></br></br>
+		</td>
+		</tr>
+	</table></center>
+		<button style="background:red; padding:1%;border:0px;
+		color:white;border-radius:5px;
+	font-size:100%;"onclick='SubForm()'>Send to Database</button>
+	</form>
+	
+<center>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQqOGFVVlj7IR2YKy6YxnQ6V8LOS8wLL4D25_VK67DpDQygpXEJSHqH1tDS9YNB2Gsxj-I6t5utSy6C/pubhtml?widget=true&amp;headers=false"
+style="width:90%;height:700px;border:0px;padding:1%;"></iframe></center>
+
+
+
+
+<!----------End ---------->
+
+
 
 
   
