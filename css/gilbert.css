@@ -346,4 +346,25 @@ color:red;
 }
 /*---------------End of Modal-------------*/
 
+/*----------------Withdraw Item in warehouse storage --------------*/
 
+
+#myForm{background:#ddd;
+	padding:1%;box-shadow:0px;
+	border-radius: 10px; font-family:arial;
+	font-size:2vh;display:block;
+	position:sticky;
+	margin-left:10vh;
+	margin-right:10vh;
+	margin-top:10%;
+	}
+#input{padding:0%;border:0px;
+	color:#000;
+	}
+#lebel{font-size:2vh;}
+
+
+
+
+
+/*---------------End ------------------------------*/
