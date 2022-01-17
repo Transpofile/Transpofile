@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Withdraw Item on Logistics 2021</title>
+
+<style>
+h1{font-size:3vw; font-family:calibri;background:whitesmoke;
+padding:1%;margin:3vw;color:gray;border-radius:1px 1px 90px 90px;
+	margin-top:-15px; }
+.tablesur{width:100%; font-size:1.2vw; padding:.2%;background:transparent;
+	color:black;border-radius:10px 10px 10px 10px; border-spacing:1vw;
+	border-style:thin;family-font:}
+
+.thsur1{border-bottom:solid #C8F825;padding:1%; background:#fff;font-family:calibri;
+	border-radius:5px 5px 0px 0px;color:gray;cursor:none;
+	 border-bottom-color:#E6E31A;}
+.thsur1:hover{background:#C8F825;color:white;}
+.thsur1>a:visited{background:#c7c829;color:white;}
+
+#year{Background:#eee;color:white;padding:1%;word-spacing:20px; border-radius:10px;}
+#year1{background:#ddd;padding:.7%; color:#444;align-item:center; border-radius:10px;}
+#year1:hover{background:#888;color:#fff; border-radius:10px;cursor:pointer;box-shadow:0px 0px 3px 1px;
+		transition:1s;}
+
+#year2{background:#ddd;padding:.7%; color:whitesmoke;align-item:center; border-radius:10px;cursor:pointer;}
+</style>
+
+
+
+	<script
+		src="https://code.jquery.com/jquery-3.4.1.js"
+		integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+		crossorigin="anonymous"></script>
+	<script>
+		function SubForm (){
+			$.ajax({
+				url:"https://api.apispreadsheets.com/data/13294/",
+				type:"post",
+				data:$("#myForm").serializeArray(),
+				success: function(){
+					alert("Form Data Submitted to Database :)")
+				},
+				error: function(){
+					alert("There was an error :(")
+				}
+			});
+		}
+	</script>
+</head>
+<body>
+
+<h1 align="center">
+<span style="font-size:1.2vw;color:red;">Note: This record is base on the warehouse issuance slip
+(W.I.S)</span>
+</br>Withdrawed Item on Logistics Warehouse</h1>
+<h2 align="center"style="color:#ccc;font-family:calibri;">YEAR <span style="color:red;">2021</span> RECORDED</h2>
+<div id="year" align="center">
+<a href="withdrawal.html" title="Year 2021 Record" style="text-decoration:none;"><span id="year1">2021</span></a>
+<a href="../withdrawal.html" style="text-decoration:none;" title="Year 2022 On Process"><span id="year1"title="On Process Data">2022</span></a>
+<span id="year2" title="No Data Recorded">2023</span>
+<span id="year2" title="No Data Recorded">2024</span>
+<span id="year2" title="No Data Recorded">2025</span>
+<span id="year2" title="No Data Recorded">2026</span>
+<span id="year2" title="No Data Recorded">2027</span>
+<span id="year2" title="No Data Recorded">2028</span>
+<span id="year2" title="No Data Recorded">2029</span>
+<span id="year2" title="No Data Recorded">2030</span>
+</div>
+</br>
+
+<center>
+
+<a href="https://transpofile.github.io/Transpofile/html/qrcode.html" style="text-decoration:none;"><button style="cursor:pointer;padding:1%;border:none;border-radius:3px 4px 3px 4px; color:red;"><b>Home</b></button></a>
+<a href="withdrawal.html"style="text-decoration:none;"><button style="padding:1%;border:none;cursor:pointer;border-radius:3px 4px 3px 4px; color:red;"><b>Withdraw Item to Logistics</b></button></a>
+<a href="itemforpr.html"style="text-decoration:none;"><button style="padding:1%;border:none;cursor:pointer;border-radius:3px 4px 3px 4px; color:red;"><b>Requested For PR</b></button></a>
+<a href="currentbill.html" style="text-decoration:none;"><button style="padding:1%;border:none;cursor:pointer;border-radius:3px 4px 3px 4px; color:red;"><b>Electric & Water Bill</b></button></a>
+<a href="storage.html" style="text-decoration:none;"><button style="padding:1%;border:none;cursor:pointer;border-radius:3px 4px 3px 4px; color:red;"><b>Withdraw Item In Transpo Storage</b></button></a>
+
+</center>
+
+	<p align="center" style="background:whitesmoke;color:gray; padding:1%; font-size:1vw; font-family:calibri;">
+
+	This Record is Base on Warehouse issuance slip ( W.I.S ) last Year Recorded in a year 2021
+	Please Contact Person Assigned on this record.
+	
+	</p>
+
+	<div style="font-family:calibri;">
+</br></br>
+<center>
+<!----	<form id="myForm" style="width:100vw; height:auto;">
+		<label>Item No</label>
+		<input style="width:50px;max-with:100%; color:gray;font-family:calibri;border:0;
+		background:whitesmoke;border-radius:7%;padding:.5%;" value="" placeholder="Item"type="number" name="Item No" required />
+
+		<label>Material</label>
+		<input style="max-with:100%; color:gray;font-family:calibri;border:0;
+		background:whitesmoke;border-radius:7%;padding:.5%;" placeholder="Enter Material" type="name" name="Material" required/>
+
+		<label>Quantity</label>
+		<input style="width:50px;max-with:100%; color:gray;font-family:calibri;border:0;
+		background:whitesmoke;border-radius:7%;padding:.5%;" placeholder="Qty" type="number" name="Quantity" required/></br></br></br>
+
+		<label>Date</label>
+		<input style="max-with:100%; color:gray;font-family:calibri;border:0;
+		background:whitesmoke;border-radius:7%;padding:.5%;" placeholder="Enter Date" type="date"name="Date" required/>
+
+		<label>Description</label>
+		<input style="width:;max-with:100%; color:gray;font-family:calibri;border:0;
+		background:whitesmoke;border-radius:7%;padding:.5%;" placeholder="Enter Description" type="text" name="Description" required/>
+
+		<label>Status</label>
+		<input style="width:100px;max-with:100%; color:gray;font-family:calibri;border:0;
+		background:whitesmoke;border-radius:7%;padding:.5%;" placeholder="Enter Status" type="text"name="Status" required/>
+
+	</form></br></br>
+		<button  style="border:solid #000;border-color:red; background:whitesmoke;color:red;padding:1%;border-radius:20%;cursor:pointer;"onclick='SubForm()'><b>Add to Database</b></button>
+		</div>---></center>
+
+<div align="center">
+<iframe src="https://docs.google.com/spreadsheets/d/1y0PFnAlwvVjuiWuq8Sy1sNYT_-Rwylih2FTDewlklWY/edit?rm=minimal"
+style="width:95vw; height:250vh;padding:0; family-font:calibri;border:none;"></iframe>
+</div>
+
+
+
+</body>
+</html>
