@@ -128,8 +128,7 @@ body{font-family:calibri;font-size:14.5;font-style:bold;Margin:auto;background:l
        #gilflex1-2{display:inline-block;display:flex;flex-flow:row wrap; margin:auto; width:100%; background:linear-gradient(to bottom,#fff, #fff, #fff,#fff,#fff); padding:1%;}
 
 .gilh1{letter-spacing:.1em;font-color:Whitesmoke; font-size:30; font-family:krinkes;
- background-image:url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjk0NC1iYi0xNi5qcGc.jpg?s=fzOLJ27wWMAm94otI4ZqsKMwk8TZYdwDTnGhP2zCAV4")
-	  no-repeat center center fixed;
+ background-image:url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjk0NC1iYi0xNi5qcGc.jpg?s=fzOLJ27wWMAm94otI4ZqsKMwk8TZYdwDTnGhP2zCAV4") no-repeat center center fixed;
   -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover; width:100%; height:auto; padding:5%;margin-top:0;margin-left:0;margin-right:0;}
         .logo{width:150px;height:150px;}
 
