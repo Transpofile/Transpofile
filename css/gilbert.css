@@ -129,7 +129,7 @@ body{font-family:calibri;font-size:14.5;font-style:bold;Margin:auto;background:l
 
 .gilh1{letter-spacing:.1em;font-color:Whitesmoke; font-size:30; font-family:krinkes;
  background-image:url("https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjk0NC1iYi0xNi5qcGc.jpg?s=fzOLJ27wWMAm94otI4ZqsKMwk8TZYdwDTnGhP2zCAV4");
-	background-repeat:no-repeat;background-position:100%; width:100%; height:auto; padding:5%;margin-top:0;margin-left:0;margin-right:0;}
+	background-repeat:no-repeat;background-position:100%; background-size:cover; width:100%; height:auto; padding:5%;margin-top:0;margin-left:0;margin-right:0;}
         .logo{width:150px;height:150px;}
 
      .gilp1{max-width:100%; border:auto; padding:4%; margin-left:5;margin-right:10; font-family:calibri; font-size:1.2vw; letter-spacing:.3em ;
