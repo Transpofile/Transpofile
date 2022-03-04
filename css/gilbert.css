@@ -128,8 +128,8 @@ body{font-family:calibri;font-size:14.5;font-style:bold;Margin:auto;background:l
        #gilflex1-2{display:inline-block;display:flex;flex-flow:row wrap; margin:auto; width:100%; background:linear-gradient(to bottom,#fff, #fff, #fff,#fff,#fff); padding:1%;}
 
 .gilh1{letter-spacing:.1em;font-color:Whitesmoke; font-size:30; font-family:krinkes;
- background-image:url("https://previews.123rf.com/images/derausdo/derausdo0807/derausdo080700006/3281746-giallo-verde-acquerello-lavare-sfondo.jpg") no-repeat center center fixed; 
-  background-size: cover; width:100%; height:auto; padding:5%;margin-top:0;margin-left:0;margin-right:0;}
+ background-image:url("https://previews.123rf.com/images/derausdo/derausdo0807/derausdo080700006/3281746-giallo-verde-acquerello-lavare-sfondo.jpg");
+	background: no-repeat center center fixed;background-size: cover; width:100%; height:auto; padding:5%;margin-top:0;margin-left:0;margin-right:0;}
         .logo{width:150px;height:150px;}
 
      .gilp1{max-width:100%; border:auto; padding:4%; margin-left:5;margin-right:10; font-family:calibri; font-size:1.2vw; letter-spacing:.3em ;
